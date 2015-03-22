@@ -1,10 +1,14 @@
 {
   "name": "strike-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Strike Search API client",
   "main": "lib/strike.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeroware/strike-api"
   },
   "keywords": [
     "torrent",
@@ -20,7 +24,6 @@
     "mocha": "^2.2.1"
   },
   "dependencies": {
-    "bluebird": "^2.9.14",
     "promise": "^6.1.0",
     "superagent": "^1.1.0",
     "superagent-promise": "^0.2.0"
