@@ -1,0 +1,30 @@
+{
+  "rules": {
+    "block-scoped-var": 1,
+    "default-case": 1,
+    "no-else-return": 1,
+    "no-throw-literal": 2,
+    "strict": [2, "global"],
+    "no-mixed-requires": 1,
+    "generator-star": [2, "start"],
+    "quotes": [2, "single"],
+    "no-underscore-dangle": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "ecmaFeatures": {
+    "forOf": true,
+    "generators": true,
+
+  },
+  "globals": {
+    "describe"   : false,
+    "it"         : false,
+    "before"     : false,
+    "beforeEach" : false,
+    "after"      : false,
+    "afterEach"  : false
+  }
+}

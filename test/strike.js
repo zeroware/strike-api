@@ -1,4 +1,6 @@
-var assert = require("assert");
+'use strict';
+
+var assert = require('assert');
 var strike = require('../lib/strike');
 
 describe('strike', function(){
@@ -18,7 +20,7 @@ describe('strike', function(){
             }).catch(function(err) {
                 done(err);
             });
-        })
+        });
     });
 
     describe('#downloadLink()', function(){
@@ -32,7 +34,7 @@ describe('strike', function(){
             }).catch(function(err) {
                 done(err);
             });
-        })
+        });
     });
 
     describe('#search()', function(){
@@ -52,7 +54,7 @@ describe('strike', function(){
             }).catch(function(err) {
                 done(err);
             });
-        })
+        });
     });
 
     describe('#countTotal()', function(){
@@ -66,6 +68,25 @@ describe('strike', function(){
             }).catch(function(err) {
                 done(err);
             });
-        })
-    })
+        });
+    });
+
+    describe('#top()', function(){
+        it('should return top for given category', function(done) {
+            strike.top('Anime').then(function(result) {
+
+                var status = result[0];
+                var data = result[1];
+
+                assert.equal(200, status.statuscode);
+                assert.ok(data.length > 0);
+                assert.equal('Anime', data[0].torrent_category);
+
+                done();
+            }).catch(function(err) {
+                done(err);
+            });
+        });
+    });
 });
+
