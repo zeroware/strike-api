@@ -1,6 +1,6 @@
 {
   "name": "strike-api",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Strike Search API client",
   "main": "lib/strike.js",
   "scripts": {
