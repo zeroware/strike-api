@@ -8,8 +8,8 @@ This is a simple node.js API client for the _Strike Search_ website (http://gets
 	var strike = require('strike-api');
 	
 	strike.info('B425907E5755031BDA4A8D1B6DCCACA97DA14C04').then(function(res) {
-        var status = res[0];
-        var results = res[1];
+        var status = res.statuscode;
+        var results = res.torrents;
     
         var result = results[0];
     
@@ -18,8 +18,8 @@ This is a simple node.js API client for the _Strike Search_ website (http://gets
     
     strike.search('Slackware').then(function(res) {
     
-        var status = res[0];
-        var results = res[1];
+        var status = res.statuscode;
+        var results = res.torrents;
     
         for(var i in results) {
             console.log('L:' + results[i].leeches + ' S:' + results[i].seeds + ' - ' +  results[i].torrent_title + ' (' + results[i].size + ')')
