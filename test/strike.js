@@ -130,5 +130,22 @@ describe('strike', function(){
             });
         });
     });
+
+
+    describe('#imdb', function() {
+        it('should return the imdb item', function(done) {
+            strike.imdb('tt1520211').then(function(result) {
+                var title = result.title;
+                var imdbId = result.imdbID;
+
+                assert.equal('tt1520211', imdbId);
+                assert.equal('The Walking Dead', title);
+
+                done();
+            }).catch(function(err) {
+                done(err);
+            });
+        });
+    })
 });
 
